@@ -4,7 +4,7 @@ on:
   pull_request:
   push:
     branches:
-      - main
+      - fix/view-function-visibility
 
 jobs:
   test:
@@ -16,7 +16,7 @@ jobs:
       - name: Install toolchain
         uses: actions-rs/toolchain@v1
         with:
-          toolchain: stable
+          toolchain: 1.77.0
           profile: minimal
 
       - uses: Swatinem/rust-cache@v1
